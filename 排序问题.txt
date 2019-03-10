@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <string.h>
+#include <algorithm>
+
+using namespace std;
+//学生的结构体
+struct E
+{
+	char name[101];
+	int age;
+	int score;
+}buf[1000];
+//比较函数
+bool cmp(E a,E b)
+{
+	if(a.score!=b.score)
+		return a.score<b.score;
+	int tmp=strcmp(a.name,b.name);
+	if(tmp!=0) return tmp<0;
+	else return a.age<b.age;
+}
+//主函数
+int main()
+{
+	int n;
+	while(scanf("%d",&n)!=EOF)
+	{
+	//输入
+	for(int i=0;i<n;i++)
+	{
+		scanf("%s%d%d",buf[i].name,&buf[i].age,&buf[i].score);
+	}
+	//排序
+	sort(buf,buf+n,cmp);
+	//输出
+	for(i=0;i<n;i++)
+	{
+		printf("%s %d %d\n",buf[i].name,buf[i].age,buf[i].score);
+	}
+	}
+	return 0;
+}
