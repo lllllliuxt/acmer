@@ -1,0 +1,57 @@
+**题目**
+
+
+**代码:**
+```C++
+#include <iostream>
+
+using namespace std;
+
+string str;
+
+int change(int a,int b)
+{
+	int sum=0;
+	for(int i=a;i<=b;++i)
+	{
+		if(str[i]>='0'&&str[i]<='9')//不为数字，则直接将其置为超界
+		{
+		sum=sum*10+str[i]-'0';
+		}
+		else
+			return -1;
+	}
+	return sum;
+}
+
+int main()
+{
+	int T;
+	while(cin >>T)
+	{
+		for(int i=0;i<T;++i)
+		{
+			int pos1=0;//标记每个十六进制数的起始位置 
+			int pos2;
+			cin >>str;
+			int flag=1;//判断是否有不合法的数 
+			while(str.find('.',pos1)!=string::npos)
+			{
+				pos2=str.find('.',pos1);
+				int tmp=change(pos1,pos2-1);
+				pos1=pos2+1;
+				if(tmp<0||tmp>255)
+					flag=0;
+			}
+				int tmp=change(pos1,str.size()-1);
+				if(tmp<0||tmp>255)
+					flag=0;
+			if(flag==1)
+				cout << "Yes" <<endl;
+			else
+				cout << "No" <<endl;
+		}
+	}
+	return 0;
+}
+```
