@@ -3,55 +3,44 @@
 ![题目图片](https://github.com/lllllliuxt/acmer/blob/master/%E5%8C%97%E9%82%AE%E6%9C%BA%E8%AF%95/%E9%A2%98%E7%9B%AE.png)
 
 **代码:**
+# 经验
+- 输出的大小写要注意一致
+- scanf的格式化输入启发很大，节省很多
+- while（T--）
+- sscanf()的使用
 ```C++
 #include <iostream>
-
+#include <cstdio>
+#include <cstring>
 using namespace std;
-
-string str;
-
-int change(int a,int b)
-{
-	int sum=0;
-	for(int i=a;i<=b;++i)
-	{
-		if(str[i]>='0'&&str[i]<='9')//不为数字，则直接将其置为超界
-		{
-		sum=sum*10+str[i]-'0';
-		}
-		else
-			return -1;
-	}
-	return sum;
-}
 
 int main()
 {
-	int T;
-	while(cin >>T)
+	int ip[4],T;
+	char buf[20],k;
+	bool flag;
+	int count;
+	scanf("%d",&T);
+	while(T--)
 	{
-		for(int i=0;i<T;++i)
+		flag=true;
+		scanf("%s",buf);
+		count=sscanf(buf,"%d.%d.%d.%d%c",&ip[0],&ip[1],&ip[2],&ip[3],&k);
+		if(count!=4)//输入的个数为4，没有废串 ，若中间有字符串则停止输入 
 		{
-			int pos1=0;//标记每个十六进制数的起始位置 
-			int pos2;
-			cin >>str;
-			int flag=1;//判断是否有不合法的数 
-			while(str.find('.',pos1)!=string::npos)
+			flag=false;
+		} 
+		else
+		for(int i=0;i<4;++i)
 			{
-				pos2=str.find('.',pos1);
-				int tmp=change(pos1,pos2-1);
-				pos1=pos2+1;
-				if(tmp<0||tmp>255)
-					flag=0;
+				if(ip[i]>255||ip[i]<0)
+					{
+						flag=false;
+						break;
+					}
 			}
-				int tmp=change(pos1,str.size()-1);
-				if(tmp<0||tmp>255)
-					flag=0;
-			if(flag==1)
-				cout << "Yes" <<endl;
-			else
-				cout << "No" <<endl;
-		}
+			
+		printf("%s\n",flag?"Yes":"No");
 	}
 	return 0;
 }
