@@ -1,5 +1,7 @@
 **题目:**
 
+![题目图片](https://github.com/lllllliuxt/acmer/blob/master/%E5%8C%97%E9%82%AE%E6%9C%BA%E8%AF%95/%E9%A2%98%E7%9B%AE.png)
+
 **代码:**
 ```C++
 #include <iostream>
