@@ -6,11 +6,11 @@
 - [经验1](https://github.com/lllllliuxt/acmer/blob/master/%E6%9C%BA%E8%AF%95%E8%B5%84%E6%96%99%E6%89%93%E5%8D%B0.docx)
 - #include <bits/stdc++.h> 万能包
 - abs()求绝对值
- #### ip问题的经验
-- 输出的大小写要注意一致
-- scanf的格式化输入启发很大，节省很多
-- while（T--）
-- sscanf()的使用
+- #### ip问题的经验
+  - 输出的大小写要注意一致
+  - scanf的格式化输入启发很大，节省很多
+  - while（T--）
+  - sscanf()的使用
 ### 北邮机试题
 
 - [ip问题](https://github.com/lllllliuxt/acmer/blob/master/%E5%8C%97%E9%82%AE%E6%9C%BA%E8%AF%95/ip%E9%97%AE%E9%A2%98)
