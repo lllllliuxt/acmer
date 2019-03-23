@@ -1,0 +1,38 @@
+```
+/*给出一个序列，判断该序列是不是某二叉搜索树的中序遍历序列，如果是输出"Yes"，否则输出"No"。*/
+#include <iostream>
+
+using namespace std;
+//思路，一颗搜索二叉树的中序遍历，是所以节点权值的递增的一组数 
+int main()
+{
+	int T;
+	while(cin >> T)
+	{
+		for(int i=0;i<T;++i)
+		{
+			int N;
+			cin >> N;
+			int buf[601];
+			for(int j=0;j<N;++j)
+			{
+				cin >> buf[j];
+			}
+			int flag=1;
+			for(int j=1;j<N;++j)
+			{
+				if(buf[j]<buf[j-1])
+				{
+					flag=0;
+					break;
+				}
+			}
+			if(flag==1)
+				cout << "YES" <<endl;
+			else
+				cout << "NO" << endl;
+		}
+	}
+	return 0;
+}
+```
