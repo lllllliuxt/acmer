@@ -42,3 +42,4 @@
 - [字符串转换](https://github.com/lllllliuxt/acmer/blob/master/北邮机试/字符串转换.md)
 - [最小距离查询](https://github.com/lllllliuxt/acmer/blob/master/北邮机试/最小距离查询.md)
 - [统计节点个数](https://github.com/lllllliuxt/acmer/blob/master/北邮机试/统计节点个数.md)
+- [汇编](https://github.com/lllllliuxt/acmer/blob/master/北邮机试/汇编.md)
