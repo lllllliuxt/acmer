@@ -44,3 +44,4 @@
 - [统计节点个数](https://github.com/lllllliuxt/acmer/blob/master/北邮机试/统计节点个数.md)
 - [汇编](https://github.com/lllllliuxt/acmer/blob/master/北邮机试/汇编.md)
 - [最长等差子序列](https://github.com/lllllliuxt/acmer/blob/master/%E5%8C%97%E9%82%AE%E6%9C%BA%E8%AF%95/%E6%9C%80%E9%95%BF%E8%BF%9E%E7%BB%AD%E7%AD%89%E5%B7%AE%E5%AD%90%E5%BA%8F%E5%88%97.md)
+- [最近公共祖先](https://github.com/lllllliuxt/acmer/blob/master/%E5%8C%97%E9%82%AE%E6%9C%BA%E8%AF%95/%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88.md)
